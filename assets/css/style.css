@@ -88,7 +88,7 @@ background: #290118;
   margin: 0;
   padding: 0;
   width: auto;
-  background-color: #fff;
+  /* background-color: #fff; */
   margin: 20px;
  
 
@@ -497,6 +497,11 @@ section {
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
+.about{
+  background-color: #d5cec4;
+  height: 90vh;
+  margin-bottom: 0;
+}
 .about .content {
   padding: 30px 0;
 }
@@ -510,30 +515,10 @@ section {
   margin-bottom: 0;
 }
 
-.about .content .icon-box {
-  margin-top: 25px;
-}
-
-.about .content .icon-box h4 {
-  font-size: 20px;
-  font-weight: 700;
-  margin: 5px 0 10px 60px;
-}
-
-.about .content .icon-box i {
-  font-size: 48px;
-  float: left;
-  color: #5c9f24;
-}
-
-.about .content .icon-box p {
-  font-size: 15px;
-  color: #848484;
-  margin-left: 60px;
-}
 
 .about .image {
-  background: url("../image/my1.jpeg") center center no-repeat;
+  /* background: url("../image/my1.jpeg") center center no-repeat; */
+  background: url("../image/40DF3CE4-D2AC-45D1-B856-3499334DF2AA.JPEG") center center no-repeat;
   background-size: contain;
   min-height: 400px;
 }
@@ -559,9 +544,10 @@ section {
   height: auto;
   background-color:#fff;
   /* overflow: hidden; */
-  margin-top: 10px;
+  margin-top: 0;
   position: relative;
   padding-bottom: 0;
+  padding-top: 0;
   /* margin-top: 80px; */
 }
 
@@ -685,6 +671,9 @@ section {
 /*--------------------------------------------------------------
 # Frequently Asked Questions
 --------------------------------------------------------------*/
+.faq{
+  background-color: #d5cec4;
+}
 .faq .faq-list {
   padding: 0 100px;
 }
@@ -955,14 +944,14 @@ section {
 # Footer
 --------------------------------------------------------------*/
 #footer {
-  background: #290118;
+  background: #1d1d1d;
   padding: 0 0 30px 0;
   color: #fff;
   font-size: 14px;
 }
 
 #footer .footer-top {
-  background: #1d1d1d;
+  background: #290118;
   border-bottom: 1px solid #2f2f2f;
   padding: 60px 0 30px 0;
 }
@@ -990,7 +979,7 @@ section {
 #footer .footer-top .social-links a {
   font-size: 18px;
   display: inline-block;
-  background: #290118;
+  background: #8a5d56;
   color: #fff;
   line-height: 1;
   padding: 8px 0;
@@ -1003,8 +992,8 @@ section {
 }
 
 #footer .footer-top .social-links a:hover {
-  background: #8a5d56;
-  color: #fff;
+  background: #fff;
+  color: #290118;
   text-decoration: none;
 }
 
@@ -1013,18 +1002,20 @@ section {
   /* font-weight: 600; */
   color: #fff;
   position: relative;
-  padding-bottom: 12px;
+  padding-bottom: 17px;
   
 }
 
 #footer .footer-top .footer-links {
   margin-bottom: 30px;
+  
 }
 
 #footer .footer-top .footer-links ul {
   list-style: none;
   padding: 0;
   margin: 0;
+  
 }
 
 #footer .footer-top .footer-links ul i {
@@ -1032,12 +1023,14 @@ section {
   color: #8a5d56;
   font-size: 18px;
   line-height: 1;
+  
 }
 
 #footer .footer-top .footer-links ul li {
-  padding: 10px 0;
+  padding: 15px 0;
   display: flex;
-  align-items: center;
+ justify-content: center;
+ 
 }
 
 #footer .footer-top .footer-links ul li:first-child {
@@ -1069,7 +1062,18 @@ section {
   width: calc(100% - 110px);
 }
 
+#footer .moon{
+  width: 100%;
+  /* display: flex;
+  align-items: flex-end; */
 
+}
+#footer .moon img{
+  width: 30vh;
+  /* padding: 20px; */
+  /* top: 200px; */
+
+}
 
 #footer .copyright {
   text-align: center;
