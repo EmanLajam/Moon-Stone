@@ -655,6 +655,7 @@ section {
 .discount{
   text-decoration: line-through;
    color: black;
+   font-size: medium;
 }
 .services .box:hover span,
 .services .box:hover h4,
