@@ -12,8 +12,12 @@
 body {
   /* font-family: "Open Sans", sans-serif; */
   /* font-family: 'Amiri', serif, Arial, Tahoma, sans-serif; */
-  font-family: 'Courier New', Courier, monospace;
+  /* font-family: 'Courier New', Courier, monospace; */
+  font-weight: 600;
+  font-size: larger;
   color: #444444;
+
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 a {
@@ -32,7 +36,9 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Tahoma';
+  /* font-family: 'Tahoma'; */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
 }
 
 /*--------------------------------------------------------------
@@ -45,8 +51,9 @@ h6 {
   right: 15px;
   bottom: 15px;
   z-index: 996;
-  background: #a5575e;
+  /* background: #a5575e; */
   /* background: #6f626c; */
+  background: #3d393d;
 
   width: 40px;
   height: 40px;
@@ -61,7 +68,8 @@ h6 {
 }
 
 .back-to-top:hover {
-  background: rgb(165, 87, 94, 0.8);
+  /* background: rgb(165, 87, 94, 0.8); */
+  background: rgb(61, 57, 61, 0.8);
   color: #fff;
 }
 
@@ -132,7 +140,9 @@ background: #290118;
   align-items: center;
   justify-content: space-between;
   padding: 0 4px;
-  font-family:'Courier New', Courier, monospace;
+  /* font-family:'Courier New', Courier, monospace; */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
   font-size: 14px;
   font-weight: 500;
   color: rgba(255, 255, 255, 0.7);
@@ -156,7 +166,8 @@ background: #290118;
   height: 2px;
   bottom: -6px;
   left: 0;
-  background-color: #a5575e;
+  /* background-color: #a5575e; */
+  background-color: #d5cec4;
   visibility: hidden;
   width: 0px;
   transition: all 0.3s ease-in-out 0s;
@@ -369,8 +380,8 @@ background: #290118;
 #hero h2{
   color: #fff;
   margin-bottom: 30px;
-  font-size: 45px;
-  /* font-weight: 700; */
+  /* font-size: 45px; */
+  font-weight: 400;
 }
 #hero h4{
   color: #fff;
@@ -394,7 +405,9 @@ background: #290118;
 
 
 #hero .btn-get-started {
-  font-family:'Tahoma', Geneva, Verdana, sans-serif;
+  /* font-family:'Tahoma', Geneva, Verdana, sans-serif; */
+  /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+
   font-weight: 600;
   font-size: 14px;
   letter-spacing: 1px;
@@ -420,7 +433,7 @@ background: #290118;
 @media (max-width: 768px) {
    
   #hero{
-    height: 20vh
+    height: 35vh
   }
   
 #hero .background-container {
@@ -428,7 +441,7 @@ background: #290118;
 }
   #hero h2 {
   
-    font-size: 15px;
+    font-size: 20px;
     font-weight: 500;
     margin-bottom: 15px;
   }
@@ -440,7 +453,7 @@ background: #290118;
   }
   #hero p {
     margin: 0 auto 15px auto;
-    font-size: 10px;
+    font-size: 15px;
 
   }
   #hero .btn-get-started {
@@ -498,7 +511,7 @@ section {
 # About
 --------------------------------------------------------------*/
 .about{
-  background-color: #d5cec4;
+  background-color: #f8f5ec;
   height: auto;
   margin-bottom: 0;
 }
@@ -549,6 +562,7 @@ section {
   padding-bottom: 0;
   padding-top: 0;
   /* margin-top: 80px; */
+ 
 }
 
 #cta .image {
@@ -574,6 +588,7 @@ section {
   align-items: center;
   padding: 15px;
   margin: 0;
+  
 }
 
 #cta .image-content img {
@@ -585,6 +600,8 @@ section {
   color: #fff;
   margin-top: 15px;
   font-size: 20px;
+  font-weight: 100;
+  /* font-family: 'Courier New', Courier, monospace; */
 }
 
 /* Optional: Adjust the image size or position as needed */
@@ -635,11 +652,14 @@ section {
   padding: 30px 30px 70px 30px;
   box-shadow: 10px 15px 30px rgba(0, 0, 0, 0.18);
 }
-
+.discount{
+  text-decoration: line-through;
+   color: black;
+}
 .services .box:hover span,
 .services .box:hover h4,
 .services .box:hover p, 
-.services .box:hover p span {
+.services .box:hover .discount {
   color: #fff;
 }
 
@@ -701,7 +721,7 @@ section {
 .faq .faq-list a {
   display: block;
   position: relative;
-  font-family: "Tahoma";
+  
   font-size: 16px;
   line-height: 24px;
   font-weight: 600;
@@ -763,7 +783,7 @@ section {
 # Contact
 --------------------------------------------------------------*/
 .contact{
-  margin-top: 40px;
+  margin-top: 60px;
 }
 .contact .contact-info {
   margin-bottom: 20px;
@@ -774,7 +794,7 @@ section {
   font-size: 48px;
   display: inline-block;
   margin-bottom: 10px;
-  color: #3e242e;
+  color: #290118;
 }
 
 .contact .contact-info address,
@@ -862,18 +882,18 @@ section {
 }
 
 .contact .php-email-form button[type=submit] {
-  background: #8a5d56;
+  background: #343a40;
   border: 0;
   padding: 10px 30px 12px 30px;
   color: #fff;
   transition: 0.4s;
   border-radius: 4px;
-  font-family: 'Tahoma';
+  /* font-family: 'Tahoma'; */
   font-weight: 600;
 }
 
 .contact .php-email-form button[type=submit]:hover {
-  background: rgb(138, 93, 86, .8);
+  background: rgb(52, 58, 64, .8);
 }
 
 @keyframes animate-loading {
@@ -979,14 +999,15 @@ section {
   font-size: 14px;
   line-height: 24px;
   margin-bottom: 0;
-  font-family: "Roboto", sans-serif;
+  /* font-family: "Roboto", sans-serif; */
   color: #fff;
 }
 
 #footer .footer-top .social-links a {
   font-size: 18px;
   display: inline-block;
-  background: #8a5d56;
+  background: #3d393d;
+  /* background: #8a5d56; */
   color: #fff;
   line-height: 1;
   padding: 8px 0;
@@ -1027,7 +1048,8 @@ section {
 
 #footer .footer-top .footer-links ul i {
   padding-right: 2px;
-  color: #8a5d56;
+  /* color: #8a5d56; */
+  color: #3d393d;
   font-size: 18px;
   line-height: 1;
   
@@ -1052,7 +1074,8 @@ section {
 }
 
 #footer .footer-top .footer-links ul a:hover {
-  color: #8a5d56;
+  /* color: #8a5d56; */
+  color: #3d393d;
 }
 
 #footer .footer-top .footer-newsletter form {
