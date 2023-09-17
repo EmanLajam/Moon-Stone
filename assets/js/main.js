@@ -225,6 +225,38 @@
      mirror: false
    })
  });
+ // script.js
+ document.addEventListener('DOMContentLoaded', function() {
+  const largeImage = document.getElementById('largeImage');
+  const smallImages = document.querySelectorAll('.small-image');
+
+  // Function to handle image click
+  function handleImageClick(clickedImage) {
+      // Remove the 'selected-image' class from all small images
+      smallImages.forEach((img) => {
+          img.classList.remove('selected-image');
+      });
+
+      // Set the large image source to the clicked small image source
+      largeImage.src = clickedImage.src;
+
+      // Add the 'selected-image' class to the clicked image
+      clickedImage.classList.add('selected-image');
+  }
+    // Set the initial large image with the source of the first small image
+    largeImage.src = smallImages[0].src;
+
+    // Add the 'selected-image' class to the first small image
+    smallImages[0].classList.add('selected-image');
+
+  // Attach click event listeners to small images
+  smallImages.forEach((smallImage) => {
+      smallImage.addEventListener('click', () => {
+          handleImageClick(smallImage);
+      });
+  });
+});
+
   /**
    * Initiate Pure Counter 
    */

@@ -404,17 +404,17 @@ background: #290118;
   transition: 0.5s;
   line-height: 1;
   margin: 10px;
-  color: #fff;
+  color: #290118;
   animation-delay: 0.8s;
   text-transform: uppercase;
-  border: 2px solid  #a5575e;
-  background:  #a5575e;
+  border: 2px solid  #d5cec4;
+  background:  #d5cec4;
 }
 
 #hero .btn-get-started:hover {
-  background: rgb(165, 87, 94, 0.8);
-  border-color: rgb(165, 87, 94, 0.8);
-  color: #fff;
+  background: rgb(213, 206, 196, 0.8);
+  border-color: rgb(213, 206, 196, 0.8);
+
 }
 
 @media (max-width: 768px) {
@@ -473,12 +473,12 @@ section {
 }
 
 .section-bg {
-  background-color: #f1f1f1;
+  background-color: #f8f5ec;
 }
 
 .section-title {
   text-align: center;
-  padding-bottom: 30px;
+  /* padding-bottom: 30px; */
 }
 
 .section-title h2 {
@@ -499,7 +499,7 @@ section {
 --------------------------------------------------------------*/
 .about{
   background-color: #d5cec4;
-  height: 90vh;
+  height: auto;
   margin-bottom: 0;
 }
 .about .content {
@@ -518,7 +518,7 @@ section {
 
 .about .image {
   /* background: url("../image/my1.jpeg") center center no-repeat; */
-  background: url("../image/40DF3CE4-D2AC-45D1-B856-3499334DF2AA.JPEG") center center no-repeat;
+  background: url("../image/IMG_6533.JPG") center center no-repeat;
   background-size: contain;
   min-height: 400px;
 }
@@ -566,26 +566,29 @@ section {
 }
 
 #cta .image-content {
+  padding-top: 0;
   background: #290118;
   text-align: center;
   display: flex;
-  justify-content:center;
-  /* align-items: center; */
-  /* position: absolute; */
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-  padding: 25px;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center;
+  padding: 15px;
   margin: 0;
 }
-#cta h4{
+
+#cta .image-content img {
+  width: 180px;
+
+}
+
+#cta h4 {
   color: #fff;
   margin-top: 15px;
   font-size: 20px;
- 
-  /* font-weight: 700; */
 }
+
+/* Optional: Adjust the image size or position as needed */
+
 
 /*--------------------------------------------------------------
 # Services
@@ -635,7 +638,8 @@ section {
 
 .services .box:hover span,
 .services .box:hover h4,
-.services .box:hover p {
+.services .box:hover p, 
+.services .box:hover p span {
   color: #fff;
 }
 
@@ -758,6 +762,9 @@ section {
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
+.contact{
+  margin-top: 40px;
+}
 .contact .contact-info {
   margin-bottom: 20px;
   text-align: center;
@@ -944,7 +951,7 @@ section {
 # Footer
 --------------------------------------------------------------*/
 #footer {
-  background: #1d1d1d;
+  background: #290118;
   padding: 0 0 30px 0;
   color: #fff;
   font-size: 14px;
@@ -952,7 +959,7 @@ section {
 
 #footer .footer-top {
   background: #290118;
-  border-bottom: 1px solid #2f2f2f;
+  border-bottom: 1px solid #ffffff;
   padding: 60px 0 30px 0;
 }
 
@@ -1090,4 +1097,88 @@ section {
  
   color: #8a5d56;
   font-size: larger;
+}
+
+/*--------------------------------------------------------------
+# Portfolio Details
+--------------------------------------------------------------*/
+.portfolio-details {
+  padding-top: 60px;
+  margin-top: 40px;
+}
+
+.portfolio-details .portfolio-details-slider img {
+  margin-top: 70px;
+  width: 100%;
+}
+
+.small-images {
+  margin-top: 70px;
+}
+
+
+
+.small-image {
+  
+  margin-bottom: 10px;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+   border: #290118 solid 1px;
+}
+/* styles.css */
+.selected-image {
+  border: 2px solid #290118; /* Customize the border style as needed */
+}
+
+
+.portfolio-details .portfolio-info {
+  padding: 30px;
+  box-shadow: 0px 0 30px rgba(88, 113, 109, 0.08);
+}
+
+.portfolio-details .portfolio-info h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.portfolio-details .portfolio-info ul {
+  list-style: none;
+  padding: 0;
+  font-size: 15px;
+}
+
+
+.portfolio-details .portfolio-info ul li+li {
+  margin-top: 10px;
+}
+
+.portfolio-details .portfolio-description {
+  padding-top: 30px;
+}
+
+
+.portfolio-details .portfolio-description h2 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.portfolio-details .portfolio-description ul {
+  font-size: 15px;
+  list-style: none;
+}
+
+.portfolio-details .portfolio-description ul li+li strong{
+  font-weight: bolder;
+}
+
+.portfolio-details .portfolio-description ul li+li {
+  padding-top: 20px;
+}
+.portfolio-details .portfolio-description p {
+  padding: 0;
 }
