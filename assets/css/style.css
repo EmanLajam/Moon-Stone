@@ -26,7 +26,7 @@ a {
 }
 
 a:hover {
-  color: #74c92d;
+  color: rgb(41, 1, 24, 0.8);
   text-decoration: none;
 }
 
@@ -42,7 +42,20 @@ font-family: 'Courier New', Courier, monospace;
 font-weight: 700;
 
 }
+/* Media query for screens smaller than 768px (typical smartphones) */
+@media (max-width: 768px) {
+  body {
+    font-size: medium;
+  }
 
+}
+
+/* Media query for screens between 768px and 1024px (typical tablets) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  body {
+    font-size: large;
+  }
+}
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
@@ -57,7 +70,7 @@ font-weight: 700;
   z-index: 996;
   /* background: #a5575e; */
   /* background: #6f626c; */
-  background: #3d393d;
+  background: #8a5d56;
   padding: 10px 20px;
   display: flex;
   width: 40px;
@@ -74,7 +87,7 @@ font-weight: 700;
 
 .back-to-top:hover {
   /* background: rgb(165, 87, 94, 0.8); */
-  background: rgb(61, 57, 61, 0.8);
+  background: rgb(138, 93, 86, 0.8);
   color: #fff;
 }
 
@@ -203,7 +216,7 @@ background: #290118;
   bottom: -6px;
   left: 0;
   /* background-color: #a5575e; */
-  background-color: #d5cec4;
+  background-color: #8a5d56;
   visibility: hidden;
   width: 0px;
   transition: all 0.3s ease-in-out 0s;
@@ -246,8 +259,12 @@ background: #290118;
   display: none;
   line-height: 0;
   transition: 0.5s;
+  top: 20px;
+  left: 50px;
 }
-
+.navbar-mobile.open {
+  right: 0;
+}
 .mobile-nav-toggle.bi-x {
   color: #8a5d56;
 }
@@ -272,6 +289,7 @@ background: #290118;
   background: rgba(17, 17, 17, 0.9);
   transition: 0.3s;
   z-index: 999;
+  
 }
 
 .navbar-mobile .mobile-nav-toggle {
@@ -283,27 +301,42 @@ background: #290118;
 .navbar-mobile ul {
   display: block;
   position: absolute;
-  top: 55px;
-  right: 15px;
+  top: 0;
   bottom: 15px;
-  left: 15px;
-  padding: 10px 0;
-  background-color: #fff;
+  padding: 10px 60px;
+  background-color: #d5cec4;
   overflow-y: auto;
   transition: 0.3s;
+  right: 0; /* Start from the right edge */
+  left: auto; /* Reset left position */
+  width: calc(100% - 70px);
+
+}
+/* Add a CSS transition for smoother animation */
+.navbar-mobile.open {
+  transition: right 0.3s ease;
+}
+/* Update the position when the mobile navbar is open */
+.navbar-mobile.open ul {
+  right: 0;
+}
+/* Add a class to the body when the mobile navbar is open */
+body.mobile-nav-open {
+  overflow: hidden;
 }
 
 .navbar-mobile a,
 .navbar-mobile a:focus {
   padding: 10px 20px;
   font-size: 15px;
+  font-weight: 600;
   color: #2a2a2a;
 }
 
 .navbar-mobile a:hover,
 .navbar-mobile .active,
 .navbar-mobile li:hover>a {
-  color: #290118;
+  color: #8a5d56;
 }
 
 .navbar-mobile>ul>li {
@@ -449,21 +482,22 @@ background: #290118;
   font-size: 14px;
   letter-spacing: 1px;
   display: inline-block;
-  padding: 10px 32px 12px 32px;
+  padding: 15px 32px 15px 32px;
   border-radius: 4px;
   transition: 0.5s;
   line-height: 1;
   margin: 10px;
-  color: #290118;
+  color: #fff;
   animation-delay: 0.8s;
   text-transform: uppercase;
-  border: 2px solid  #d5cec4;
-  background:  #d5cec4;
+  /* border: 2px solid  #d5cec4;
+  background:  #d5cec4; */
+  background: #8a5d56;
 }
 
 #hero .btn-get-started:hover {
-  background: rgb(213, 206, 196, 0.8);
-  border-color: rgb(213, 206, 196, 0.8);
+  background: rgb(138, 93, 86, 0.8);
+  /* border-color: rgb(213, 206, 196, 0.8); */
 
 }
 
@@ -479,13 +513,13 @@ background: #290118;
   #hero h2 {
   
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 600;
     margin-bottom: 15px;
   }
   #hero h4 {
   
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 600;
     margin-bottom: 15px;
   }
   #hero p {
@@ -495,14 +529,10 @@ background: #290118;
   }
   #hero .btn-get-started {
     
-    font-weight: 200;
-    font-size: 7px;
+    /* font-weight: 200; */
+    font-size: 13px;
     letter-spacing: 1px;
-   
-    padding: 5px 16px 6px 16px;
-
-
-
+    padding: 10px 22px 10px 22px;
     margin-bottom: 10px;
    
   }
@@ -921,9 +951,9 @@ section {
 }
 
 .contact .php-email-form button[type=submit] {
-  background: #343a40;
+  background: #8a5d56;
   border: 0;
-  padding: 10px 30px 12px 30px;
+  padding: 10px 50px 12px 50px;
   color: #fff;
   transition: 0.4s;
   border-radius: 4px;
@@ -932,7 +962,7 @@ section {
 }
 
 .contact .php-email-form button[type=submit]:hover {
-  background: rgb(52, 58, 64, .8);
+  background: rgb(138, 93, 86, .8);
 }
 
 @keyframes animate-loading {
@@ -1045,8 +1075,8 @@ section {
 #footer .footer-top .social-links a {
   font-size: 18px;
   display: inline-block;
-  background: #3d393d;
-  /* background: #8a5d56; */
+  /* background: #3d393d; */
+  background: #8a5d56;
   color: #fff;
   line-height: 1;
   padding: 8px 0;
@@ -1087,8 +1117,8 @@ section {
 
 #footer .footer-top .footer-links ul i {
   padding-right: 2px;
-  /* color: #8a5d56; */
-  color: #3d393d;
+  color: #8a5d56;
+  /* color: #3d393d; */
   font-size: 18px;
   line-height: 1;
   
@@ -1113,8 +1143,8 @@ section {
 }
 
 #footer .footer-top .footer-links ul a:hover {
-  /* color: #8a5d56; */
-  color: #3d393d;
+  color: #8a5d56;
+  /* color: #3d393d; */
 }
 
 #footer .footer-top .footer-newsletter form {
@@ -1176,6 +1206,7 @@ section {
 
 .small-images {
   margin-top: 40px;
+  margin-left: 10px;
 }
 
 
@@ -1243,4 +1274,61 @@ section {
 }
 .portfolio-details .portfolio-description p {
   padding: 0;
+}
+.portfolio-details .portfolio-description .now {
+  background: #8a5d56;
+  border: 0;
+  padding: 10px 50px 12px 50px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 4px;
+  /* font-family: 'Tahoma'; */
+  font-weight: 600;
+  margin: 30px;
+}
+@media (max-width: 768px) {
+ 
+  .small-images {
+
+   text-align: center;
+    margin: 10px; 
+   
+  }
+  .portfolio-details .portfolio-details-slider {
+  text-align: center;
+  }
+/*  */
+.portfolio-details .portfolio-details-slider img {
+  margin-top: 0;
+  width: 80%;
+}
+  
+  .portfolio-details .portfolio-info {
+    padding: 20px; /* Reduce padding */
+  }
+
+  .portfolio-details .portfolio-info h3 {
+    font-size: 18px; /* Reduce font size */
+  }
+
+  .portfolio-details .portfolio-info ul {
+    font-size: 14px; /* Reduce font size */
+  }
+
+  .portfolio-details .portfolio-description h2 {
+    font-size: 18px; /* Reduce font size */
+  }
+
+  .portfolio-details .portfolio-description ul {
+    font-size: 14px; /* Reduce font size */
+  }
+
+  .portfolio-details .portfolio-description ul li+li {
+    padding-top: 15px; /* Reduce padding top */
+  }
+
+  .portfolio-details .portfolio-description .now {
+    padding: 8px 60px; /* Reduce padding */
+    margin: 10% 20%; /* Reduce margin */
+  }
 }
